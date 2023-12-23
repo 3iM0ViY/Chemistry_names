@@ -79,7 +79,7 @@ general = [
     {"name": "Barium sulfate", "formula": "BaSO4"},
     {"name": "Benzene", "formula": "C6H6"},
     {"name": "Bicarbonate", "formula": "CHO3–"},
-    {"name": "Chromate", "formula": "CrO42-"},
+    {"name": "Chromate", "formula": "CrO4^2-"},
     {"name": "Methyl Ethyl Ketone", "formula": "C4H8O"},
     {"name": "Cyanide", "formula": "CN−"},
     {"name": "Trichloroacetic acid", "formula": "C2HCl3O2"},
@@ -113,7 +113,7 @@ general = [
     {"name": "Acetamide", "formula": "C2H5NO"},
     {"name": "Sodium silicate", "formula": "(Na2O)x·SiO2"},
     {"name": "Nitrite", "formula": "NO2−"},
-    {"name": "Phosphate", "formula": "PO43-"},
+    {"name": "Phosphate", "formula": "PO4^3-"},
     {"name": "Dichloromethane", "formula": "CH2Cl2"},
     {"name": "Carbon Disulfide", "formula": "CS2"},
     {"name": "Potassium chromate", "formula": "CrK2O4"},
@@ -190,7 +190,7 @@ general = [
     {"name": "Iodide", "formula": "I–"},
     {"name": "Lead ii acetate", "formula": "Pb(C2H3O2)2"},
     {"name": "Lithium chloride", "formula": "LiCl"},
-    {"name": "Phosphate ion", "formula": "PO43-"},
+    {"name": "Phosphate ion", "formula": "PO4^3-"},
     {"name": "Potassium fluoride", "formula": "KF"},
     {"name": "Potassium sulfite", "formula": "K2SO3"},
     {"name": "Silver carbonate", "formula": "Ag2CO3"},
@@ -294,27 +294,25 @@ acids = [
     {"name": "Hydrofluoric acid", "formula": "HF"},
 ]
 anions = [
-    {"name": "Sulfate ion", "formula": "SO42-", "charge": -2},
-    {"name": "Perchlorate ion", "formula": "ClO4-", "charge": -1},
-    {"name": "Sulfite ion", "formula": "SO32-", "charge": -2},
-    {"name": "Chlorate ion", "formula": "ClO3-", "charge": -1},
-    {"name": "Nitrate ion", "formula": "NO3-", "charge": -1},
-    {"name": "Chlorite ion", "formula": "ClO2-", "charge": -1},
-    {"name": "Nitrite ion", "formula": "NO2-", "charge": -1},
-    {"name": "Hypochlorite ion", "formula": "ClO-", "charge": -1},
-    {"name": "Phosphate ion", "formula": "PO43-", "charge": -3},
-    {"name": "Hydrogen sulfate ion", "formula": "HSO4-", "charge": -1},
-    {"name": "Phosphite ion", "formula": "PO33-", "charge": -3},
-    {"name": "Hydrogen carbonate ion", "formula": "HCO3-", "charge": -1},
-    {"name": "Carbonate ion", "formula": "CO32-", "charge": -2},
-    {"name": "Dihydrogen phosphate ion", "formula": "H2PO4-", "charge": -1},
-    {"name": "Acetate ion", "formula": "C2H3O2-", "charge": -1},
-    {"name": "Hydrogen phosphate ion", "formula": "HPO42-", "charge": -2},
+    {"name": "Sulfate ion", "formula": "SO4^2-"},
+    {"name": "Perchlorate ion", "formula": "ClO4^-"},
+    {"name": "Sulfite ion", "formula": "SO3^2-"},
+    {"name": "Chlorate ion", "formula": "ClO3^-"},
+    {"name": "Nitrate ion", "formula": "NO3^-"},
+    {"name": "Chlorite ion", "formula": "ClO2^-"},
+    {"name": "Nitrite ion", "formula": "NO2^-"},
+    {"name": "Hypochlorite ion", "formula": "ClO^-"},
+    {"name": "Phosphate ion", "formula": "PO4^3-"},
+    {"name": "Hydrogen sulfate ion", "formula": "HSO4^-"},
+    {"name": "Phosphite ion", "formula": "PO3^3-"},
+    {"name": "Hydrogen carbonate ion", "formula": "HCO3^-"},
+    {"name": "Carbonate ion", "formula": "CO3^2-"},
+    {"name": "Dihydrogen phosphate ion", "formula": "H2PO4^-"},
+    {"name": "Acetate ion", "formula": "C2H3O2^-"},
+    {"name": "Hydrogen phosphate ion", "formula": "HPO4^2-"},
 ]
-i = 0
-for d in acids:
-    d.update(anions[i])
-    i += 1
+for d in anions:
+    acids.append(d)
 
 # bases = []
 
